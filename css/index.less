@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+li{
+  list-style: none;
+}
+body{
+  background: url(../images/bg.jpg) no-repeat top center;
+  line-height: 1.15;
+  overflow-y: auto;
+}
+header{
+  position: relative;
+  height: 1.25rem;
+  background:url(../images/head_bg.png) no-repeat;
+  background-size: 100% 100%;
+  .showTime{
+  position: absolute;
+  top:0;
+  left: .375rem;
+  line-height: .9375rem;
+  font-size: .25rem;
+  color:rgba(255, 255, 255, 0.7)
+}
+  h1{
+    margin: 0;
+    font-size: .475rem;
+    color:#fff;
+    line-height: 1rem;
+    text-align: center;
+  }
+
+  .gzJJVu{
+    float: left;
+    position: absolute;
+    top: .05rem;
+    left: 4.6rem;
+    span{
+      font-size: .25rem;
+  color:rgba(255, 255, 255, 0.7)
+    }
+  }
+  .wind{
+    float: left;
+    position: absolute;
+    top: 0.4rem;
+    left: 4.6rem;
+    span{
+    font-size: .25rem;
+  color:rgba(255, 255, 255, 0.7)
+    }
+
+  }
+}
+.mainBox{
+  min-width: 1024px;
+  margin: 0 auto;
+  padding: .125rem .125rem 0;
+  #main{
+padding: 0;
+text-align: center;
+  }
+  .panel{
+    padding: 0 .1875rem .5rem;
+    margin-bottom: .1875rem;
+    border:1px solid #3989a8;
+    background-color: rgba(255, 255, 255, 0.04);
+    ul{
+      display: flex;
+      justify-content: space-around;
+      text-align: start;
+      .data{
+        display: flex;
+        align-items: flex-end;
+      }
+      span{
+        font-size: .1875rem
+      }
+      h1{
+        margin: 0;
+        padding-top: .25rem;
+        font-size: .5625rem
+      }
+    }
+  }
+  h2{
+    height: .6rem;
+    line-height: .6rem;
+    margin: 0;
+    padding: 0;
+    font-size: .25rem;
+    font-weight: 600;   
+  }
+  .data-map{
+    #main{
+     height: 6.92rem;
+    }
+    .right{
+      padding-left: 0;
+      .dataView{
+        height: 2.25rem;
+      }
+      .newProject{
+height:4.5rem;
+.protable{
+  height:3.75rem ;
+  table{
+    width: 100%;
+height: 100%;
+border: 1px solid #fff;
+border-collapse: collapse;
+th{
+  height: .375rem;
+  text-align: center;
+  font-size: .2rem;
+  font-weight: normal;
+  border: 1px solid #fff;
+}
+td{
+  text-align: center;
+  font-size: .2rem;
+  font-weight: normal;
+  border: 1px solid #fff;
+}
+  };
+}
+      }
+    }
+  }
+  // .data-charts{
+  //   #recheck{
+  //     height: 3.75rem
+  //   }
+  // }
+  .recheck{
+      height: 4.375rem;
+      #chartpie{
+        height: 100%;
+      }
+  }
+
+}
+.mainBox .data-charts .right{
+  padding-left: 0;
+}
+.mainBox .problems{
+  height: 4.375rem;
+}
+.mainBox .problems #chartbar{
+  height: 100%;
+}
