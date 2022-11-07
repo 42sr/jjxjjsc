@@ -100,66 +100,66 @@
     <h1 class="title">极简巡检数字中台</h1>
   </header>
   <section class="mainBox">
-    <div class="row">
-      <div class="data-map">
-        <div class="col-xs-8">
-          <div id="main" class="panel">
+    <!-- <div class="row"> -->
+    <div class="data-map">
+      <div class="col-xs-8">
+        <div id="main" class="panel">
 
-          </div>
-        </div>
-        <div class="col-xs-4 right">
-          <div class="dataView panel">
-            <h2>总体数据概览</h2>
-            <ul>
-              <li>
-                <span>总项目量</span>
-                <div class="data">
-                  <h1 class="projnum">72,983</h1>
-                  <span>&nbsp个</span>
-                </div>
-              </li>
-              <li>
-                <span>总问题量</span>
-                <div class="data">
-                  <h1 class="probnum">245</h1>
-                  <span>&nbsp条</span>
-                </div>
-              </li>
-              <li>
-                <span>总用户量</span>
-                <div class="data">
-                  <h1 class="usernum">932</h1>
-                  <span>&nbsp人</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="newProject panel">
-            <h2>本月新增项目</h2>
-            <div class="protable">
-              <table>
-                <thead></thead>
-                <tbody></tbody>
-              </table>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="data-charts">
-        <div class="col-xs-4">
-          <div class="recheck panel">
-            <h2>巡检中问题复核统计</h2>
-            <div id="chartpie"></div>
-          </div>
+      <div class="col-xs-4 right">
+        <div class="dataView panel">
+          <h2>总体数据概览</h2>
+          <ul>
+            <li>
+              <span>总项目量</span>
+              <div class="data">
+                <h1 class="projnum">72,983</h1>
+                <span>&nbsp个</span>
+              </div>
+            </li>
+            <li>
+              <span>总问题量</span>
+              <div class="data">
+                <h1 class="probnum">245</h1>
+                <span>&nbsp条</span>
+              </div>
+            </li>
+            <li>
+              <span>总用户量</span>
+              <div class="data">
+                <h1 class="usernum">932</h1>
+                <span>&nbsp人</span>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="col-xs-8  right">
-          <div class="problems panel">
-            <h2>高频问题TOP10</h2>
-            <div id="chartbar"></div>
+        <div class="newProject panel">
+          <h2>本月新增项目</h2>
+          <div class="protable">
+            <table>
+              <thead></thead>
+              <tbody></tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
+    <div class="data-charts">
+      <div class="col-xs-4">
+        <div class="recheck panel">
+          <h2>巡检中问题复核统计</h2>
+          <div id="chartpie"></div>
+        </div>
+      </div>
+      <div class="col-xs-8  right">
+        <div class="problems panel">
+          <h2>高频问题TOP10</h2>
+          <div id="chartbar"></div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
   </section>
 </body>
 
@@ -404,6 +404,26 @@
       num: "3"
     }]
   ]
+
+  function timing() {
+    // 取消高亮指定的数据图形
+    myChart.dispatchAction({
+      type: 'downplay',
+      seriesIndex: 0,
+      dataIndex: index,
+    });
+    // 高亮指定的数据图形
+    myChart.dispatchAction({
+      type: 'highlight',
+      seriesIndex: 0,
+      dataIndex: index + 1,
+    });
+    index++;
+    if (index > num) {
+      index = -1;
+    }
+  }
+
   //加载时的文字提示
   myChart.showLoading({
     text: '正在加载数据'
@@ -413,7 +433,7 @@
   //定时播放
   var timer = setInterval(function () {
     //调用定时播放代码
-    // timing()
+    timing()
   }, 1500);
   //鼠标移入
   myChart.on('mousemove', function (e) {
@@ -445,7 +465,7 @@
     //重新开始定时播放
     timer = setInterval(function () {
       //调用定时播放代码
-      // timing()
+      timing()
     }, 1500);
   });
   //点击事件

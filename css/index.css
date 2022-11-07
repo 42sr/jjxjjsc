@@ -14,7 +14,7 @@ body {
 }
 header {
   position: relative;
-  height: 1.25rem;
+  height: 1rem;
   background: url(../images/head_bg.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -22,35 +22,35 @@ header .showTime {
   position: absolute;
   top: 0;
   left: 0.375rem;
-  line-height: 0.9375rem;
-  font-size: 0.25rem;
+  line-height: 0.7rem;
+  font-size: 0.2rem;
   color: rgba(255, 255, 255, 0.7);
 }
 header h1 {
   margin: 0;
-  font-size: 0.475rem;
+  font-size: 0.4rem;
   color: #fff;
-  line-height: 1rem;
+  line-height: 0.9rem;
   text-align: center;
 }
 header .gzJJVu {
   float: left;
   position: absolute;
-  top: 0.05rem;
+  top: 0.04rem;
   left: 4.6rem;
 }
 header .gzJJVu span {
-  font-size: 0.25rem;
+  font-size: 0.2rem;
   color: rgba(255, 255, 255, 0.7);
 }
 header .wind {
   float: left;
   position: absolute;
-  top: 0.4rem;
+  top: 0.28rem;
   left: 4.6rem;
 }
 header .wind span {
-  font-size: 0.25rem;
+  font-size: 0.2rem;
   color: rgba(255, 255, 255, 0.7);
 }
 .mainBox {
@@ -82,8 +82,8 @@ header .wind span {
 }
 .mainBox .panel ul h1 {
   margin: 0;
-  padding-top: 0.25rem;
-  font-size: 0.5625rem;
+  padding-top: 0.175rem;
+  font-size: 0.5rem;
 }
 .mainBox h2 {
   height: 0.6rem;
@@ -93,20 +93,24 @@ header .wind span {
   font-size: 0.25rem;
   font-weight: 600;
 }
+.mainBox .data-map {
+  height: 6.125rem;
+}
 .mainBox .data-map #main {
-  height: 6.92rem;
+  height: 5.935rem;
 }
 .mainBox .data-map .right {
   padding-left: 0;
+  height: 100%;
 }
 .mainBox .data-map .right .dataView {
-  height: 2.25rem;
+  height: 2rem;
 }
 .mainBox .data-map .right .newProject {
-  height: 4.5rem;
+  height: 3.75rem;
 }
 .mainBox .data-map .right .newProject .protable {
-  height: 3.75rem;
+  height: 90% ;
 }
 .mainBox .data-map .right .newProject .protable table {
   width: 100%;
@@ -115,7 +119,6 @@ header .wind span {
   border-collapse: collapse;
 }
 .mainBox .data-map .right .newProject .protable table th {
-  height: 0.375rem;
   text-align: center;
   font-size: 0.2rem;
   font-weight: normal;
@@ -128,7 +131,7 @@ header .wind span {
   border: 1px solid #fff;
 }
 .mainBox .recheck {
-  height: 4.375rem;
+  height: 3.9375rem;
 }
 .mainBox .recheck #chartpie {
   height: 100%;
@@ -137,7 +140,7 @@ header .wind span {
   padding-left: 0;
 }
 .mainBox .problems {
-  height: 4.375rem;
+  height: 3.9375rem;
 }
 .mainBox .problems #chartbar {
   height: 100%;

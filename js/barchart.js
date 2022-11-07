@@ -6,10 +6,10 @@ function drawBar(data) {
     tooltip: {},
     color: "#4d7bd7",
     grid: {
-      top: "10%",
+      top: "5%",
       left: "15%",
       right: "10%",
-      bottom: "30%"
+      bottom: "32%"
     },
     xAxis: {
       data: ['消防车登高面消防救援口', '电气防爆', '建筑外墙和屋面保温', '对疏散设施影响', '应急照明配电箱',
