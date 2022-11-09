@@ -1,192 +1,280 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #fff;
 }
-li{
+
+li {
   list-style: none;
 }
-body{
+
+body {
   background: url(../images/bg.jpg) no-repeat top center;
   line-height: 1.15;
   overflow-y: auto;
 }
-header{
+
+header {
   position: relative;
   // height: 1.25rem;
   height: 1rem;
-  background:url(../images/head_bg.png) no-repeat;
+  background: url(../images/head_bg.png) no-repeat;
   background-size: 100% 100%;
-  .showTime{
-  position: absolute;
-  top:0;
-  left: .375rem;
-  line-height: 0.7rem;
-  font-size: .2rem;
-  color:rgba(255, 255, 255, 0.7)
-}
-  h1{
+
+  .showTime {
+    position: absolute;
+    top: 0;
+    left: .375rem;
+    line-height: 0.7rem;
+    font-size: .2rem;
+    color: rgba(255, 255, 255, 0.7)
+  }
+
+  h1 {
     margin: 0;
     font-size: .4rem;
-    color:#fff;
+    color: #fff;
     line-height: 0.9rem;
     text-align: center;
   }
 
-  .gzJJVu{
+  .gzJJVu {
     float: left;
     position: absolute;
     top: .04rem;
     left: 4.6rem;
-    span{
+
+    span {
       font-size: .2rem;
-  color:rgba(255, 255, 255, 0.7)
+      color: rgba(255, 255, 255, 0.7)
     }
   }
-  .wind{
+
+  .wind {
     float: left;
     position: absolute;
     top: 0.28rem;
     left: 4.6rem;
-    span{
-    font-size: .2rem;
-  color:rgba(255, 255, 255, 0.7)
+
+    span {
+      font-size: .2rem;
+      color: rgba(255, 255, 255, 0.7)
     }
 
   }
 }
-.mainBox{
+
+.mainBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 1024px;
-  max-width: 3840px;
+  height: 100vh;
   margin: 0 auto;
   padding: .125rem .125rem 0;
-  #main{
-padding: 0;
-text-align: center;
+
+  #main {
+    padding: 0;
+    text-align: center;
   }
-  .panel{
+
+  .panel {
     padding: 0 .1875rem .5rem;
     margin-bottom: .1875rem;
-    border:1px solid #3989a8;
+    border: 1px solid #3989a8;
     background-color: rgba(255, 255, 255, 0.04);
-    ul{
+
+    ul {
       display: flex;
       justify-content: space-around;
       text-align: start;
-      .data{
+
+      .data {
         display: flex;
         align-items: flex-end;
       }
-      span{
+
+      span {
         font-size: .1875rem
       }
-      h1{
+
+      h1 {
         margin: 0;
         padding-top: .175rem;
         font-size: .5rem
       }
     }
   }
-  h2{
+
+  h2 {
     height: .6rem;
     line-height: .6rem;
     margin: 0;
     padding: 0;
     font-size: .25rem;
-    font-weight: 600;   
+    font-weight: 600;
   }
-//   .data-map{
-//     #main{
-//      height: 6.92rem;
-//     }
-//     .right{
-//       padding-left: 0;
-//       .dataView{
-//         height: 2.25rem;
-//       }
-//       .newProject{
-// height:4.5rem;
-// .protable{
-//   height:3.75rem ;
-//   table{
-//     width: 100%;
-// height: 100%;
-// border: 1px solid #fff;
-// border-collapse: collapse;
-// th{
-//   height: .375rem;
-//   text-align: center;
-//   font-size: .2rem;
-//   font-weight: normal;
-//   border: 1px solid #fff;
-// }
-// td{
-//   text-align: center;
-//   font-size: .2rem;
-//   font-weight: normal;
-//   border: 1px solid #fff;
-// }
-//   };
-// }
-//       }
-//     }
-//   }
 
-.data-map{
-  height: 6.125rem;
-  #main{
-   height: 5.935rem;
-  }
-  .right{
-    padding-left: 0;
-    height: 100%;
-    .dataView{
-      height: 2rem;
+  // .data-map {
+  //   height: 6.125rem;
+
+  //   #main {
+  //     height: 5.935rem;
+  //   }
+
+  //   .right {
+  //     padding-left: 0;
+  //     height: 100%;
+
+  //     .dataView {
+  //       height: 2rem;
+  //     }
+
+  //     .newProject {
+  //       height: 3.75rem;
+
+  //       .protable {
+  //         height: 90%;
+
+  //         table {
+  //           width: 100%;
+  //           height: 100%;
+  //           border: 1px solid #fff;
+  //           border-collapse: collapse;
+
+  //           th {
+  //             // height: .375rem;
+  //             text-align: center;
+  //             font-size: .2rem;
+  //             font-weight: normal;
+  //             border: 1px solid #fff;
+  //           }
+
+  //           td {
+  //             text-align: center;
+  //             font-size: .2rem;
+  //             font-weight: normal;
+  //             border: 1px solid #fff;
+  //           }
+  //         }
+
+  //         ;
+  //       }
+  //     }
+  //   }
+  // }
+  .data-map {
+    // height: 6.125rem;
+    height: 65%;
+
+    .col-xs-8 {
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      height: 100%;
+
+      .map {
+        height: 100%;
+        padding: 0;
+
+        #main {
+          height: 100%;
+        }
+      }
+
+
     }
-    .newProject{
-height:3.75rem;
-.protable{
-height:90% ;
-table{
-  width: 100%;
-height: 100%;
-border: 1px solid #fff;
-border-collapse: collapse;
-th{
-// height: .375rem;
-text-align: center;
-font-size: .2rem;
-font-weight: normal;
-border: 1px solid #fff;
-}
-td{
-text-align: center;
-font-size: .2rem;
-font-weight: normal;
-border: 1px solid #fff;
-}
-};
-}
+
+
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 0;
+      height: 100%;
+
+      .dataView {
+        // height: 2rem;
+        height: 40%;
+      }
+
+      .newProject {
+        // height: 3.75rem;
+        height: 60%;
+
+        .protable {
+          height: 90%;
+
+          table {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #fff;
+            border-collapse: collapse;
+
+            th {
+              // height: .375rem;
+              text-align: center;
+              font-size: .2rem;
+              font-weight: normal;
+              border: 1px solid #fff;
+            }
+
+            td {
+              text-align: center;
+              font-size: .2rem;
+              font-weight: normal;
+              border: 1px solid #fff;
+            }
+          }
+
+          ;
+        }
+      }
     }
   }
-}
-  .recheck{
+
+  .data-charts {
+    height: 40%;
+
+    .col-xs-4,
+    .col-xs-8 {
+      height: 100%;
+    }
+
+    .recheck {
       // height: 4.375rem;
-  height: 3.9375rem;
-      #chartpie{
+      // height: 3.9375rem;
+      height: 100%;
+
+      #chartpie {
         height: 100%;
       }
+    }
+
+    .problems {
+      height: 100%;
+
+      #chartbar {
+        height: 100%;
+      }
+    }
   }
 
+
+
 }
-.mainBox .data-charts .right{
+
+.mainBox .data-charts .right {
   padding-left: 0;
 }
-.mainBox .problems{
+
+.mainBox .problems {
   // height: 4.375rem;
-  height: 3.9375rem;
+  // height: 3.9375rem;
 }
-.mainBox .problems #chartbar{
-  height: 100%;
+
+.mainBox .problems #chartbar {
+  // height: 100%;
 }

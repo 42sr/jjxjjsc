@@ -54,8 +54,11 @@ header .wind span {
   color: rgba(255, 255, 255, 0.7);
 }
 .mainBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 1024px;
-  max-width: 3840px;
+  height: 100vh;
   margin: 0 auto;
   padding: 0.125rem 0.125rem 0;
 }
@@ -95,23 +98,35 @@ header .wind span {
   font-weight: 600;
 }
 .mainBox .data-map {
-  height: 6.125rem;
+  height: 65%;
 }
-.mainBox .data-map #main {
-  height: 5.935rem;
+.mainBox .data-map .col-xs-8 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.mainBox .data-map .col-xs-8 .map {
+  height: 100%;
+  padding: 0;
+}
+.mainBox .data-map .col-xs-8 .map #main {
+  height: 100%;
 }
 .mainBox .data-map .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-left: 0;
   height: 100%;
 }
 .mainBox .data-map .right .dataView {
-  height: 2rem;
+  height: 40%;
 }
 .mainBox .data-map .right .newProject {
-  height: 3.75rem;
+  height: 60%;
 }
 .mainBox .data-map .right .newProject .protable {
-  height: 90% ;
+  height: 90%;
 }
 .mainBox .data-map .right .newProject .protable table {
   width: 100%;
@@ -131,18 +146,25 @@ header .wind span {
   font-weight: normal;
   border: 1px solid #fff;
 }
-.mainBox .recheck {
-  height: 3.9375rem;
+.mainBox .data-charts {
+  height: 40%;
 }
-.mainBox .recheck #chartpie {
+.mainBox .data-charts .col-xs-4,
+.mainBox .data-charts .col-xs-8 {
+  height: 100%;
+}
+.mainBox .data-charts .recheck {
+  height: 100%;
+}
+.mainBox .data-charts .recheck #chartpie {
+  height: 100%;
+}
+.mainBox .data-charts .problems {
+  height: 100%;
+}
+.mainBox .data-charts .problems #chartbar {
   height: 100%;
 }
 .mainBox .data-charts .right {
   padding-left: 0;
-}
-.mainBox .problems {
-  height: 3.9375rem;
-}
-.mainBox .problems #chartbar {
-  height: 100%;
 }
